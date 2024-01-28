@@ -1,26 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <title>|| FORM ||</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Data Entry Website</title>
-    <style>
-        /* Your CSS styles here */
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Simple Data Entry Website</h1>
-        <form id="dataForm" action="https://formspree.io/f/mayrqvwb" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required>
-            <input type="submit" value="Submit">
-        </form>
-        
-    </div>
 
-    
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="https://img.icons8.com/3d-fluency/256/satellites.png" />
+</head>
+
+<body>
+
+<div class="wrapper">
+    <div class="inner">
+        <div class="image-holder">
+            <img src="images/registration-form-4.jpg" alt="">
+        </div>
+        <form id="myForm" action="https://formspree.io/f/mayrqvwb" method="post" >
+            <h3>Message Me </h3>
+            <div class="form-holder active">
+                <input type="text" name="name" placeholder="name" required class="form-control">
+            </div>
+            <div class="form-holder">
+                <input type="email" name="e-mail" placeholder="e-mail" required class="form-control">
+            </div>
+            <div class="form-holder">
+                <input type="text"  name="message"   placeholder="message" required  class="form-control" style="font-size: 15px;">
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" checked> I agree all statement in <a href="">Terms & Conditions</a>
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="form-login">
+                <button type="reset" value="reset" >clear </button>
+                <button type="submit" value="submit" >Send</button>
+                <p>Already Have account? <a href="">Login</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Function to go back to the previous page after form submission
+    document.getElementById("myForm").addEventListener("submit", function() {
+        setTimeout(function() {
+            window.history.back();
+        }, 1000); // Adjust the delay as needed
+    });
+</script>
+
 </body>
 </html>
